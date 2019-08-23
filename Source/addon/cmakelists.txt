@@ -1,0 +1,23 @@
+# This cmakelists file is a project specific entry file.
+
+# Setup solution.
+project (lineage-crypto-addon
+    LANGUAGES CXX
+    VERSION 0.1.0
+)
+
+# Get all files.
+file(GLOB_RECURSE SOURCE_FILES "*.cxx" "*.hxx")
+
+# Build a static cmake-js library sample.
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_library(ThunderstormPRO::lineage-crypto-addon ALIAS lineage-crypto-addon)
+
+# Gives our library file a .node extension without any "lib" prefix
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
+
+# Essential include files to build a node addon.
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_JS_INC})
+
+# Essential library files to link to a node addon.
+target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB}) 

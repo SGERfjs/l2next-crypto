@@ -1,0 +1,57 @@
+{
+  "generator-node-cmake": {
+    "solution": {
+      "name": "lineage-crypto",
+      "version": "0.1.0",
+      "description": "Encrypt / Decrypt C++ library for Lineage 2 files.",
+      "keywords": [
+        "Lineage2",
+        "encdec",
+        "nodejs",
+        "cmake"
+      ],
+      "bin": "",
+      "main": "index.js",
+      "projects": [
+        {
+          "name": "lib",
+          "type": "staticlib",
+          "path": "./source/lib"
+        },
+        {
+          "name": "app",
+          "type": "executable",
+          "path": "./source/app"
+        },
+        {
+          "name": "addon",
+          "type": "node-addon",
+          "path": "./source/addon"
+        }
+      ],
+      "scripts": {
+        "start": "node ./",
+        "cmake-js": "cmake-js",
+        "install": "cmake-js compile"
+      },
+      "dependencies": {
+        "nan": "2.14.0",
+        "bindings": "^1.5.0"
+      },
+      "devDependencies": {
+        "yeoman-generator": "^4.0.1",
+        "cmake-js": "5.3.1"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/one-thunder/lineage-crypto"
+      },
+      "author": "Alexei Gaidulean",
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/one-thunder/lineage-crypto/issues"
+      },
+      "homepage": "https://github.com/one-thunder/lineage-crypto#readme"
+    }
+  }
+}

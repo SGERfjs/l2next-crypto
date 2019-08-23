@@ -1,0 +1,13 @@
+# This cmakelists file is a project specific entry file.
+
+# Setup solution.
+project (lineage-crypto-app
+    LANGUAGES CXX
+    VERSION 0.1.0
+)
+
+# Get all files.
+file(GLOB_RECURSE SOURCE_FILES "*.cxx" "*.hxx")
+
+# Build executable.
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})

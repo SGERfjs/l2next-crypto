@@ -1,0 +1,14 @@
+# This cmakelists file is a project specific entry file.
+
+# Setup solution.
+project (lineage-crypto-lib
+    LANGUAGES CXX
+    VERSION 0.1.0
+)
+
+# Get all files.
+file(GLOB_RECURSE SOURCE_FILES "*.cxx" "*.hxx")
+
+# Build a static library sample.
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+add_library(ThunderstormPRO::lineage-crypto-lib ALIAS lineage-crypto-lib)

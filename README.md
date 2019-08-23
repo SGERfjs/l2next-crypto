@@ -1,6 +1,30 @@
 # lineage-crypto
 Encrypt / Decrypt C++ library for Lineage 2 files.
 
+### Prerequisites
+
+CMake `3.14.0` +
+NPM `6.10.0` +
+Node.js `10.16.0` +
+
+### Installing
+
+Use `yeoman` to install / build / generate files for this project.
+
+Following command was used to scaffold this app: 
+
+```
+$ yo node-cpp
+```
+
+If you need to create additional project for this solution use:
+
+```
+$ yo node-cpp:create project
+```
+
+More options will be added later.
+
 # Requirements
 
 The below requirements must be met to build this library.
@@ -36,5 +60,6 @@ Below is the list of supported VS versions:
 
 # Building solution
 
-To perform a Windows build using a 32/64-bit:
-Open ./Build/LineageCrypto.sln in Visual Studio and select **Build > Build Solution**.
+To perform a Windows build using a 32/64-bit run:
+
+`yo node-cmake:build`.
